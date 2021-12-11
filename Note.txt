@@ -1,0 +1,70 @@
+Observation 2 - information on the type of variable and min-max values
+===============================================================================================================
+ID: categorical, qualitative, nominal variable with lowest id being 0 and highest value of id being 5000.
+
+Age: numerical, quantitative, ratio (has true zero, technically). Whether it's discrete or continuous depends on whether they are measured to the nearest year or not. At present, it seems it's discrete. Min age in the dataset being 23 and max being 67.
+
+Experience: numerical (continuous), quantitative, interval (an experience of 0 means no experience). Min experience in the dataset being -3 (which seems to be an error made while recording) and max experience being 43.
+
+Income: numerical (continuous), quantitative, interval (an income of 0 means no income). Min income in the dataset being 8,000 dollars while the maximum income being 224,000 dollars.
+
+ZIP Code: categorical (sum of two zip codes is not meaningful), qualitative, nominal.
+
+Family: categorical, qualitative, ordinal. Lowest family size being 1 and max being 4.
+
+CCAvg: numerical (continuous), quantitative, interval. Min average spending on credit cards per month being zero dollars and maximum being 10,000 dollars.
+
+Education: categorical, qualitative, ordinal. 1: Undergrad; 2: Graduate; 3: Advanced/Professional.
+
+Mortgage: numerical (continuous), quantitative, interval. Min mortage value in the dataset being zero dollars, which means there was no house mortage, and maximum value being 635,000 dollars.
+
+Personal Loan: also the target variable. categorical (binary), qualitative, nominal. If the customer accepted the personal loan offered in the last campaign then 1 else 0.
+
+Securities Account: categorical (binary), qualitative, nominal. If the customer has a securities account with the bank then 1 else 0.
+
+CD Account: categorical (binary), qualitatitve, nominal. If the customer has a certificate of deposit (CD) account with the bank then 1 else 0.
+
+Online: categorical (binary), qualitative, nominal. If the customer uses internet banking facilities then 1 else 0.
+
+CreditCard: categorical (binary), qualitative, nominal. If the customer use a credit card issued by UniversalBank then 1 else 0.
+
+
+
+
+Observation 3 - Descriptive Statistics for the numerical variables
+=====================================================================================================================
+Descriptive statistics for the numerical variables (Age, Experience, Income, CCAvg, Mortgage)
+
+Age: Range of Q1 to Q3 is between 35 to 55. Since the mean is almost similar to median, we can say that Age is normally distributed.
+
+Experience: Range of Q1 to Q3 is between 20 to 30. Since the mean is almost similar to median, we can say that Experience is normally distributed. However, as mentioned above also, there are some recording errors in experience. We can either remove these rows (values) or else impute those to mean/median values.
+
+Income: Range of Q1 to Q3 is between 39 to 98. Since mean is greater than median, we can say that Income is right (positively) skewed.
+
+CCAvg: Range of Q1 to Q3 is between 0.70 to 2.50. Since mean is greater than median, we can say that CCAvg is right (positively) skewed.
+
+Mortgage: 75% of data values are around 101,000 dollars whereas the maximum value being 635,000 dollars. Mortage is highly skewed towards right.
+
+
+
+Questions
+=============
+# Get info of the dataframe columns
+# Five point summary of numerical attributes
+# Checking the distribution of target variable
+# Checking count of negative values in Experience
+# Checking distribution of Experience column before and after imputation
+# Updated five point summary of Experience column
+
+Observation 5 - Dealing with negative experience
+======================================================
+The observation where experience is marked negative in the dataset is for people with Age range of 23-29 with median and mean being close to 24. These group of people who are marked negative experience in the dataset have Income ranging between 12 to 150, they didn't take Personal Loan that was offered to them in the earlier campaign and niether do they have certificate of deposit account with the bank. Used these findings to impute the negative values in experience. There's a slight but a negligible change in the value of mean from 20.1046 to 20.1404 whereas median value stays unaffected.
+
+# Distribution of Mortgage
+# Distribution of CCAvg
+# Distribution of Income
+
+
+Observation 6 - From distribution of skewed numerical variables
+=====================================================================
+Value 0 is the most frequently occuring value in Mortgage
